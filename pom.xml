@@ -70,7 +70,7 @@
               <server>TomcatServer</server>
               <path>/autobuild</path>
           </configuration>
-      <plugin>
+      </plugin>
     </plugins>
   </build>
 </project>

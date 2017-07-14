@@ -1,0 +1,28 @@
+* {
+  font-family: "Helvetica Neue","Helvetica","Arial","PingFang SC","Hiragino Sans GB", "Microsoft YaHei","WenQuanYi Micro Hei", sans-serif;
+}
+.bottom-absolute-part{
+	position: fixed;
+	bottom: 0px;
+}
+.swiper-container {
+    width: 100%;
+}
+.swiper-container img {
+    display: block;
+    width: 100%;
+}
+.weui-tabbar p{
+    margin: 0px;
+}
+.weui-tabbar a{
+    text-decoration: none;
+}
+
+.top-pannel {
+  padding-bottom: 60px;
+}
+
+.weui-tabbar{
+  position: fixed;
+}

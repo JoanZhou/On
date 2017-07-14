@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.on.dao.run.StyleGoalDao">
+	
+	<!-- 从数据库插入生成目标 -->
+	<insert id="insertStyleGaol" parameterType="com.on.domain.StyleGoal"
+		keyProperty="styleId  ">
+		
+		INSERT INTO StyleGoal(
+		styleId,
+		type,
+		goalDays,
+		goalDistance,
+		kilosDay,
+		mul,
+		deposit,
+		bail,
+		kilos,
+		finAll,
+		date,
+		bonusAll
+		)
+		VALUES
+		(
+		#{styleId},
+		#{type},
+		#{goalDays},
+		#{goalDistance},
+		#{kilosDay},
+		#{mul},
+		#{deposit},
+		#{bail},
+		#{kilos},
+		#{finAll},
+		#{date},
+		#{bonusAll}
+		)
+	</insert>
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.on.dao.active.ActivityRecordDao">
+
+	 <resultMap id="activityResultMap" type="com.on.domain.ActivityRecord">
+  		<id property="activityID" column="activityID" />
+  		<result property="activityType" column="activityType"/>
+  		<result property="activityLevel" column="activityLevel"/>
+  		<result property="attendPeople" column="attendPeople" />
+  		<result property="acoefficient" column="acoefficient"/>
+  		<result property="totalBonus" column="totalBonus"/>
+	</resultMap>
+	
+	<sql id="columns">
+		activityID,activityType,activityLevel,attendPeople,acoefficient,totalBonus
+	</sql>
+	<select id="getAllActivityRecord"  resultMap="activityResultMap">
+		select <include refid="columns"></include> from ActivityRecord
+	</select>
+</mapper>

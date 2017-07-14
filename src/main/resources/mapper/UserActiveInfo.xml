@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.on.dao.user.UserActiveInfoDao">
+	
+	
+	<resultMap id="userResultMap" type="com.on.domain.UserActiveInfo">
+  		<id property="id" column="id" />
+  		<result property="userId" column="userId"/>
+  		<result property="targetId" column="targetId"/>
+  		<result property="status" column="status" />
+  		<result property="createTime" column="createTime"/>
+  		<result property="finishDay" column="finishDay"/>
+  		<result property="comment" column="comment"/>
+	</resultMap>
+	
+	<select id="getUserId" parameterType="String" resultType="int">
+		select userId from UserInfo where openId = #{openId}
+	</select>
+	<!--  -->
+	<select id="getUserActiveInfoDao" parameterType="int" resultMap="userResultMap">
+		select id,userId,targetId,status,createTime,finishDay,comment from UserActiveInfo where userId=#{userId}
+	</select>
+</mapper>

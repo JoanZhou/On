@@ -26,6 +26,7 @@ public class ActivityController {
 	@RequestMapping(value = "GetActivity", method = RequestMethod.GET)
 	public void getAllActivity(HttpServletRequest request, HttpServletResponse response) {
 		
+		
 		List<ActivityRecord> list = activityService.getAllActivityRecord();
 		JSONArray jsa = new JSONArray();
 		JSONObject jso;

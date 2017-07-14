@@ -8,7 +8,6 @@ import com.on.domain.ActivityRecord;
 
 @Repository
 public interface ActivityRecordDao {
-
 	//获取所有活动记录
 	public List<ActivityRecord> getAllActivityRecord();
 }

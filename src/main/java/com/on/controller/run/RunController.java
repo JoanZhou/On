@@ -26,7 +26,7 @@ public class RunController {
 	@RequestMapping(value = "SetRunningGoal", method = RequestMethod.GET)
 	public void SetRunningGoal(@RequestParam("activityID")int activityID, @RequestParam("type")int type,@RequestParam("goalDays")int goalDays,
 			@RequestParam("goalDistance")int goalDistance, @RequestParam("bail")int bail, @RequestParam("deposit")int deposit,
-			@RequestParam("pcoeffient")int pcoeffient, HttpServletRequest request, HttpServletResponse response) {
+			@RequestParam("pcoeffient")float pcoeffient, HttpServletRequest request, HttpServletResponse response) {
 		
 		StyleGoal gaol = new StyleGoal(activityID, type, goalDays, goalDistance, pcoeffient, deposit, bail, 0, 0, new Date(), 0);
 		boolean isSucces = runService.insertStyleGaol(gaol);

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.on.domain.UserActiveInfoVO;
+import com.on.domain.UserActiveInfo;
 import com.on.service.user.UserService;
 
 @Controller
@@ -29,12 +29,12 @@ public class UserController {
 	public void getActivityStatus(@RequestParam("openID") String openID, 
 			HttpServletRequest request, HttpServletResponse response) {
 		
-		List<UserActiveInfoVO> list = userService.getUserActiveInfoDao(openID);
+		List<UserActiveInfo> list = userService.getUserActiveInfoDao(openID);
 		JSONArray jsa = new JSONArray();
 		JSONObject jso;
 		
 		for (int  i = 0; i < list.size(); i++) {
-			UserActiveInfoVO uai = list.get(i);
+			UserActiveInfo uai = list.get(i);
 			jso = new JSONObject();
 			jso.accumulate("activityID", uai.getTargetId());
 			jso.accumulate("status", uai.getStatus());

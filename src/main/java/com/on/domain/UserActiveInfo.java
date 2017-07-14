@@ -30,6 +30,10 @@ public class UserActiveInfo {
 		this.createTime = createTime;
 	}
 	
+	public UserActiveInfo() {
+		
+	}
+	
 	
 	public int getId() {
 		return id;
